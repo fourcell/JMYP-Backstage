@@ -13,6 +13,7 @@ var uploadRouter = require('./routes/backstageRouter/upload/backstage-upload')
 let appRegsRouter = require('./routes/appRouter/app-login/login-reg')
 let appLogin = require('./routes/appRouter/app-login/login-log')
 let appSelect = require('./routes/appRouter/app-goods/goods-select')
+let appDatails = require('./routes/appRouter/app-goods/goods-datails')
 
 
 var app = express();
@@ -36,6 +37,7 @@ app.use('/upload',uploadRouter)
 app.use('/appRegs',appRegsRouter)
 app.use('/appLogin',appLogin)
 app.use('/appSelect',appSelect)
+app.use('/appDatails',appDatails)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
