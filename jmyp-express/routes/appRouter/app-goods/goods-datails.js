@@ -34,11 +34,11 @@ router.get('/', async function (req, res, next) {
         price: select[0].price, //评论
         vip_price: select[0].vip_price //评论
     }
-    console.log(param, sku)
+
     try {
         data.code = 0
         data.msg = "请求成功"
-        data.payload = select
+        data.payload = { param, sku }
     } catch (error) {
         data.code = 400
         data.msg = error
