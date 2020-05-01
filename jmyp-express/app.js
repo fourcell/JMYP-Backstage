@@ -14,6 +14,7 @@ let appRegsRouter = require('./routes/appRouter/app-login/login-reg')
 let appLogin = require('./routes/appRouter/app-login/login-log')
 let appSelect = require('./routes/appRouter/app-goods/goods-select')
 let appDatails = require('./routes/appRouter/app-goods/goods-datails')
+let setShopping = require('./routes/appRouter/app-goods/goods-setShopping')
 
 
 var app = express();
@@ -38,6 +39,7 @@ app.use('/appRegs',appRegsRouter)
 app.use('/appLogin',appLogin)
 app.use('/appSelect',appSelect)
 app.use('/appDatails',appDatails)
+app.use('/setShopping',setShopping)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

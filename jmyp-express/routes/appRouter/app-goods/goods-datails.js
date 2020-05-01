@@ -41,6 +41,7 @@ router.get('/', async function (req, res, next) {
         data.payload = { param, sku }
     } catch (error) {
         data.code = 400
+        data.param = []
         data.msg = error
     }
     res.json(data)
