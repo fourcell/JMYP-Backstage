@@ -3,9 +3,9 @@ var router = express.Router();
 // 初始化Client
 var OSS = require('ali-oss');
 let client = new OSS({
-  region: 'oss-cn-..com',
-  accessKeyId: '',
-  accessKeySecret: '',
+  region: 'oss-cn-beijing.aliyuncs.com',
+  accessKeyId: 'LTAI4FqzQVY3LPfpuHk2dyfh',
+  accessKeySecret: 'WjvHlzFE4Zd14o57kxjnh5OnlFPinj',
   bucket: '20200412',
 });
 

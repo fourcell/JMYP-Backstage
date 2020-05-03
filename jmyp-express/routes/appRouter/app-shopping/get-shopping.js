@@ -9,11 +9,9 @@ router.post('/', async function (req, res, next) {
   console.log(`SELECT * FROM app_user WHERE name = '${body.name}' AND pass ='${body.pass}'`)
   const data = {}   //返回的data数据
   let select = await mysql(`SELECT * FROM app_user WHERE name = '${body.name}' AND pass ='${body.pass}'`)
-
   if (select.length) {
     data.code = 0
     data.token = body.name
-    data.userId = select[0].id
     data.msg = "登录成功"
 
   } else {
