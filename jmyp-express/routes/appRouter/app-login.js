@@ -8,8 +8,8 @@ router.get('/', function (req, res, next) {
   res.append('Access-Control-Allow-Origin', '*')
 
   // ACCESS_KEY_ID/ACCESS_KEY_SECRET 根据实际申请的账号信息进行替换
-  const accessKeyId = '203804563'
-  const secretAccessKey = 'q398z14u4aybuv4knem5448gdq39h3f4'
+  const accessKeyId = ''
+  const secretAccessKey = ''
   //初始化sms_client
   let smsClient = new SMSClient({ accessKeyId, secretAccessKey })
   //发送短信
