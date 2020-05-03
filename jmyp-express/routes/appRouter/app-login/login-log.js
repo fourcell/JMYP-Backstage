@@ -11,6 +11,7 @@ router.post('/', async function (req, res, next) {
   let select = await mysql(`SELECT * FROM app_user WHERE name = '${body.name}' AND pass ='${body.pass}'`)
   if (select.length) {
     data.code = 0
+    data.token = body.name
     data.msg = "登录成功"
 
   } else {
