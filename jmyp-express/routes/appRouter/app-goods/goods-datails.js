@@ -12,12 +12,15 @@ router.get('/', async function (req, res, next) {
     let sku = []    //sku
     let param = {}
 
-    let select = await mysql(`SELECT * FROM product,sku_product WHERE product.procuct_id = 1 AND sku_product.product_id = ${id} `)
+    let select = await mysql(`SELECT * FROM product,sku_product,color,size WHERE product.procuct_id = ${id} AND sku_product.product_id = ${id} AND
+    sku_product.sku_id = color.color_id AND sku_product.sku_id = size.size_id `)
     //    console.log(JSON.parse( select[0].sp_data).sex)
+    console.log(typeof select)
     sku = select.map(item => {
+        console.log(item)
         return {
             skuId: item.sku_id, //skuId
-            img: item.picture,  //sku图片
+            // img: item.picture,  //sku图片
             size: JSON.parse(item.sp_data).size,   //sku商品的尺码
             color: JSON.parse(item.sp_data).color,    //sku商品颜色
             price: item.price,   //sku显示的价格，原价

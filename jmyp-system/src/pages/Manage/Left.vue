@@ -48,25 +48,25 @@
           <span slot="title">订单</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="3-1">订单列表</el-menu-item>
-          <el-menu-item index="3-2">订单设置</el-menu-item>
-          <el-menu-item index="3-3">退货申请处理</el-menu-item>
-          <el-menu-item index="3-3">退货原因设置</el-menu-item>
+          <el-menu-item index="/manage/indent/indent-list">订单列表</el-menu-item>
+          <el-menu-item index="/manage/indent/indent-config">订单设置</el-menu-item>
+          <el-menu-item index="/manage/indent/indent-dispose">退货申请处理</el-menu-item>
+          <el-menu-item index="/manage/indent/indent-cause">退货原因设置</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
-      <el-submenu index="4">
+      <el-submenu index="/manage">
         <template slot="title">
           <i class="el-icon-coin"></i>
-          <span slot="title">销售</span>
+          <span slot="title">用户管理</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="4-1">秒杀活动列表</el-menu-item>
-          <el-menu-item index="4-2">优惠卷列表</el-menu-item>
+          <el-menu-item index="/manage/user">用户列表</el-menu-item>
+          <!-- <el-menu-item index="4-2">优惠卷列表</el-menu-item>
           <el-menu-item index="4-3">品牌推荐</el-menu-item>
           <el-menu-item index="4-4">新品推荐</el-menu-item>
           <el-menu-item index="4-5">人气推荐</el-menu-item>
           <el-menu-item index="4-6">专题推荐</el-menu-item>
-          <el-menu-item index="4-7">广告推荐</el-menu-item>
+          <el-menu-item index="4-7">广告推荐</el-menu-item> -->
         </el-menu-item-group>
       </el-submenu>
     </el-menu>

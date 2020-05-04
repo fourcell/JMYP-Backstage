@@ -33,6 +33,9 @@ export default {
         "http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/macrozheng_small_icon.png"
     };
   },
+  created(){
+    window.console.log(this.$route)
+  },
   methods: {
     exit() {
       window.console.log(666);

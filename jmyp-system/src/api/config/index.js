@@ -107,7 +107,72 @@ const TopList = [{
         name: '商品管理',
         path: '/manage/comodity'
     }]
-}
+},
+{
+    path: '/manage/indent/indent-list',
+    list: [{
+        name: '首页',
+        path: '/manage'
+    }, {
+        name: '订单',
+        path: '/manage/indent'
+    }, {
+        name: '订单列表',
+        path: '/manage/indent/indent-list'
+    }]
+},
+{
+    path: '/manage/indent/indent-config',
+    list: [{
+        name: '首页',
+        path: '/manage'
+    }, {
+        name: '订单',
+        path: '/manage/indent'
+    }, {
+        name: '订单设置',
+        path: '/manage/indent/indent-config'
+    }]
+},
+{
+    path: '/manage/indent/indent-dispose',
+    list: [{
+        name: '首页',
+        path: '/manage'
+    }, {
+        name: '订单',
+        path: '/manage/indent'
+    }, {
+        name: '订退款申请处理',
+        path: '/manage/indent/indent-dispose'
+    }]
+},
+{
+    path: '/manage/indent/indent-cause',
+    list: [{
+        name: '首页',
+        path: '/manage'
+    }, {
+        name: '订单',
+        path: '/manage/indent'
+    }, {
+        name: '退款原因',
+        path: '/manage/indent/indent-cause'
+    }]
+},
+{
+    path: '/manage/user',
+    list: [{
+        name: '首页',
+        path: '/manage'
+    }, {
+        name: '订单',
+        path: '/manage/user'
+    }, {
+        name: '用户类别',
+        path: '/manage/user'
+    }]
+},
 ]
 
 export default TopList
