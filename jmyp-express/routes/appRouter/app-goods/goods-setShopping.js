@@ -13,9 +13,14 @@ router.post('/', async function (req, res, next) {
     const shopping_number = body.shoppingNumber
     const data = {}   //返回的data数据
 
+    let SELECT = await mysql(`SELECT * FROM cart WHERE user_id = ${user_id} AND sku_id = ${sku_id}`)
 
-   let insert = await mysql(`INSERT INTO cart(user_id,sku_id,product_id,num) VALUES('${user_id}','${sku_id}','${procuct_id}','${shopping_number}')`)
-   console.log(insert)
+    if (!SELECT.length) {
+        let INSERT = await mysql(`INSERT INTO cart(user_id,sku_id,product_id,num) VALUES('${user_id}','${sku_id}','${procuct_id}','${shopping_number}')`)
+    } else{
+        let UPDATE = await mysql(`UPDATE cart SET num=${shopping_number} WHERE user_id = ${user_id} AND sku_id = ${sku_id}`)
+    }
+
     try {
         data.code = 0
         data.msg = "添加成功"

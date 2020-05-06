@@ -16,6 +16,8 @@ let appSelect = require('./routes/appRouter/app-goods/goods-select')
 let appDatails = require('./routes/appRouter/app-goods/goods-datails')
 let setShopping = require('./routes/appRouter/app-goods/goods-setShopping')
 let getShopping = require('./routes/appRouter/app-goods/goods-getShopping')
+let deleteShopping = require('./routes/appRouter/app-goods/goods-deleteShopping')
+let search = require('./routes/appRouter/app-search/search')
 
 
 var app = express();
@@ -42,6 +44,8 @@ app.use('/appSelect',appSelect)
 app.use('/appDatails',appDatails)
 app.use('/setShopping',setShopping)
 app.use('/getShopping',getShopping)
+app.use('/deleteShopping',deleteShopping)
+app.use('/search',search)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
