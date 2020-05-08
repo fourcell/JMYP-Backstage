@@ -13,7 +13,7 @@ router.get('/', async function (req, res, next) {
     let DELETE = await mysql(`DELETE FROM cart WHERE user_id = ${user_id} AND sku_id = ${sku_id}`)
     try {
         data.code = 0
-        data.msg = "请求成功"
+        data.msg = "删除成功"
         data.payload = []
     } catch (error) {
         data.code = 400

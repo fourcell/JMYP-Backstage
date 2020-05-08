@@ -22,7 +22,7 @@ router.get('/', async function (req, res, next) {
     select.map(item => {
         stock_num += item.stock
         list.push({
-            id: item.product_id, // skuId，下单时后端需要
+            id: item.sku_id, // skuId，下单时后端需要
             price: item.vip_price, // 价格（单位分）
             s1: item.color_id, // 规格类目 k_s 为 s1 的对应规格值 id 颜色id
             s2: item.size_id, // 规格类目 k_s 为 s2 的对应规格值 id  尺寸id
