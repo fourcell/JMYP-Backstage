@@ -13,7 +13,9 @@ router.get('/', async function (req, res, next) {
     let select = await mysql(`SELECT product.product_id,p_name,p_title,describes,diss_num,sku_product.sku_id,sku_product.color_id,sku_product.size_id,vip_price,stock,num,color,img,name FROM product,sku_product,cart,color,size WHERE cart.user_id = '${user_id}'
     AND cart.sku_id = sku_product.sku_id AND sku_product.product_id = product.product_id
     AND sku_product.color_id = color.color_id AND sku_product.size_id = size.size_id `)
-
+    select.map(item => {
+        item.checked = false
+    })
     try {
         data.code = 0
         data.msg = "请求成功"
