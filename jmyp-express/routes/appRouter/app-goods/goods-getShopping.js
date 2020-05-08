@@ -14,7 +14,8 @@ router.get('/', async function (req, res, next) {
     AND cart.sku_id = sku_product.sku_id AND sku_product.product_id = product.product_id
     AND sku_product.color_id = color.color_id AND sku_product.size_id = size.size_id `)
     select.map(item => {
-        item.checked = false
+        item.checked = false,
+        item.updateShow = true
     })
     try {
         data.code = 0
