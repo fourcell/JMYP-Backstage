@@ -37,7 +37,7 @@ axios.defaults.transformRequest = data => {
  */
 
 axios.interceptors.request.use(config => {
-    let tiken = localStorage.getItem('token')
+    let token = localStorage.getItem('token')
     token && (config.headers.Authorization = token)
     return config
 }, error => {

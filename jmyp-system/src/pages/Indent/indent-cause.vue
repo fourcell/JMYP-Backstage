@@ -1,6 +1,16 @@
 <template>
-  <div>退款原因</div>
+  <div>
+    <List />
+    <indentTable />
+  </div>
 </template>
 <script>
-export default {};
+import List from "../../components/indentCause/indentCauseList";
+import indentTable from "../../components/indentCause/indentCauseTable";
+export default {
+  components: {
+    List,
+    indentTable
+  }
+};
 </script>

@@ -118,8 +118,13 @@ const TopList = [{
         path: '/manage/indent'
     }, {
         name: '订单列表',
-        path: '/manage/indent/indent-list'
-    }]
+        path: '/manage/indent/indent-list',
+    },
+    // {
+    //     path: '/movieDetail/:movieId',
+    //     name: 'movieDetail',
+    // }
+    ]
 },
 {
     path: '/manage/indent/indent-config',

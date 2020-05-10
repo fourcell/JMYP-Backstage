@@ -227,7 +227,7 @@ export default {
     },
     changeType(value) {
       //属性类型回调
-      console.log(value);
+      window.console.log(value);
     },
     addColor() {
       //添加商品颜色
@@ -298,17 +298,17 @@ export default {
     },
     handleDownload(file) {
       //图片下载
-      console.log(file);
+      window.console.log(file);
     },
     handleRemove(file, fileList) {
       //删除图片
-      console.log(this.form);
+      window.console.log(this.form);
     },
     success(file) {
-      console.log(file);
+      window.console.log(file);
     },
     handlePreview(file) {
-      console.log(file);
+      window.console.log(file);
     },
     previous() {
       //上一步

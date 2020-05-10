@@ -77,7 +77,6 @@
 export default {
   data() {
     return {
-    
       isCollapse: false,
       index: 1, //导航栏选中的index
       isok: true //是否展开

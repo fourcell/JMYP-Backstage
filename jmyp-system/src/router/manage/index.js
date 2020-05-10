@@ -53,7 +53,7 @@ const manage = [{
                 component: () => import('../../pages/Indent/indent-cause.vue'),
                 meta: {
                     title: '退款原因'
-                }
+                },
             },
             {
                 path: 'indent-config',
@@ -74,8 +74,15 @@ const manage = [{
                 component: () => import('../../pages/Indent/indent-list'),
                 meta: {
                     title: '订单列表'
-                }
+                },
             },
+            {
+                path: 'indent-listDetail',
+                component: () => import('../../components/orderDetail/orderDetail'),
+                meta: {
+                    title: '订单详情页'
+                },
+              }
         ]
     }
     ]

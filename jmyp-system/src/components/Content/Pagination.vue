@@ -29,12 +29,12 @@ export default {
   methods: {
     handleSizeChange(val) {
       //但前一页显示的条数
-      console.log(`每页 ${val} 条`);
+      window.console.log(`每页 ${val} 条`);
       this.$emit("number", val);
     },
     handleCurrentChange(val) {
       //当前页数
-      console.log(`当前页: ${val}`);
+      window.console.log(`当前页: ${val}`);
       this.$emit("pagination", val);
     }
   }

@@ -85,10 +85,10 @@ export default {
     },
     submit() {
       //提交
-      console.log(this.form);
+      window.console.log(this.form);
     },
     handleChange(value, direction, movedKeys) {
-      console.log(value, direction, movedKeys);
+      window.console.log(value, direction, movedKeys);
     }
   }
 };

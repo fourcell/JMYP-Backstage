@@ -19,15 +19,15 @@ export default {
   methods: {
     btn() {
       //选择批量的操作
-      console.log(this.value);
+      window.console.log(this.value);
     },
     toPagination(val) {
       //子组件返回的页数
-      console.log(val);
+      window.console.log(val);
     },
     toNumber(val) {
       //返回当前一页多少条数据
-      console.log(val);
+      window.console.log(val);
     }
   },
   components: {
