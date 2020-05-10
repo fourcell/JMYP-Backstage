@@ -21,7 +21,11 @@ router.get('/', async function (req, res, next) {
 
     select.map(item => {
         stock_num += item.stock
+        console.log(item)
         list.push({
+            img:item.img,//sku图片
+            name:item.p_name,    //sku商品名称
+            title:item.p_title,   //商品标题
             id: item.sku_id, // skuId，下单时后端需要
             price: item.vip_price, // 价格（单位分）
             s1: item.color_id, // 规格类目 k_s 为 s1 的对应规格值 id 颜色id
@@ -70,7 +74,8 @@ router.get('/', async function (req, res, next) {
         describes: select[0].describes,   //销量
         is_put: select[0].is_put, //评论
         price: select[0].price, //商品的原价
-        vip_price: select[0].vip_price //商品降价之后的价格
+        vip_price: select[0].vip_price, //商品降价之后的价格
+        p_place:select[0].p_place   //商品发货地址
     }
     try {
         data.code = 0
