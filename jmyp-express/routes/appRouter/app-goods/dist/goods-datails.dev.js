@@ -41,11 +41,11 @@ router.get('/', function _callee(req, res, next) {
             list.push({
               img: item.img,
               //sku图片
-              name: item.p_name,
+              p_name: item.p_name,
               //sku商品名称
-              title: item.p_title,
+              p_title: item.p_title,
               //商品标题
-              id: item.sku_id,
+              sku_id: item.sku_id,
               // skuId，下单时后端需要
               price: item.vip_price,
               // 价格（单位分）
