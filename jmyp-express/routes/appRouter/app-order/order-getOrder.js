@@ -11,7 +11,8 @@ router.get('/', async function (req, res, next) {
     const data = {}   //返回的data数据
     const order = '`order`'
 
-    let SELECT = await mysql(`SELECT * FROM ${order} WHERE u_id = ${user_id}`)
+    let SELECT = await mysql(`SELECT * FROM ${order},product,sku_product,color WHERE u_id = ${user_id} AND ${order}.p_id = product.product_id 
+    AND ${order}.s_id = sku_product.sku_id AND color.color_id = sku_product.color_id`)
     console.log(SELECT)
 
     try {
