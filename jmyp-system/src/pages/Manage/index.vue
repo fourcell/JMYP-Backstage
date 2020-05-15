@@ -1,6 +1,6 @@
 <template>
   <div class="manage">
-    <Left/>
+    <Left class="left"/>
     <Right class="right"/>
   </div>
 </template>
@@ -32,8 +32,13 @@ export default {
     }
     .left{
       height: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      overflow: auto;
     }
     .right{
       flex: 1;
+      margin-left: 200px;
     }
 </style>

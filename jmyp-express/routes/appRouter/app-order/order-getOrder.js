@@ -13,7 +13,8 @@ router.get('/', async function (req, res, next) {
 
     let SELECT = await mysql(`SELECT * FROM ${order},product,sku_product,color WHERE u_id = ${user_id} AND ${order}.p_id = product.product_id 
     AND ${order}.s_id = sku_product.sku_id AND color.color_id = sku_product.color_id`)
-    console.log(SELECT)
+    console.log(`SELECT * FROM ${order},product,sku_product,color WHERE u_id = ${user_id} AND ${order}.p_id = product.product_id 
+    AND ${order}.s_id = sku_product.sku_id AND color.color_id = sku_product.color_id`)
 
     try {
         data.code = 0

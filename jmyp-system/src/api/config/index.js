@@ -166,16 +166,16 @@ const TopList = [{
     }]
 },
 {
-    path: '/manage/user',
+    path: '/manage/user/user-list',
     list: [{
         name: '首页',
         path: '/manage'
     }, {
-        name: '订单',
+        name: '用户管理',
         path: '/manage/user'
     }, {
-        name: '用户类别',
-        path: '/manage/user'
+        name: '用户列表',
+        path: '/manage/user/user-list'
     }]
 },
 ]
