@@ -23,6 +23,7 @@ router.get('/', async function (req, res, next) {
         data.code = 400
         data.param = []
         data.msg = error
+        res.json(data)
     }
     res.json(data)
 });

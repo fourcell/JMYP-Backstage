@@ -20,6 +20,7 @@ let deleteShopping = require('./routes/appRouter/app-goods/goods-deleteShopping'
 let search = require('./routes/appRouter/app-search/search')
 let setOrder = require('./routes/appRouter/app-order/order-setOrder')
 let getOrder = require('./routes/appRouter/app-order/order-getOrder')
+let liulaobanzhuanshuSearch = require('./routes/appRouter/app-search/liulaobanzhuanshu-search')
 
 
 var app = express();
@@ -50,6 +51,7 @@ app.use('/deleteShopping',deleteShopping)
 app.use('/search',search)
 app.use('/setOrder',setOrder)
 app.use('/getOrder',getOrder)
+app.use('/liulaobanzhuanshuSearch',liulaobanzhuanshuSearch)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

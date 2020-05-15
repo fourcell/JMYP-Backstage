@@ -9,15 +9,20 @@ router.post('/', async function (req, res, next) {
     const body = req.body
     const name = body.name
     const data = {}   //返回的data数据
-    console.log(name)
-    let SELECT = await mysql(`SELECT * FROM product,sku_product,color,size WHERE p_name LIKE '%${name}%'
-    AND sku_product.product_id = product.product_id AND sku_product.color_id = color.color_id
-    AND sku_product.size_id = size.size_id`)
+    let i = 0
+    let payload = []
+    let SELECT = await mysql(`SELECT product_id,p_name FROM product WHERE p_name LIKE '%${name}%'`)
 
+    SELECT.map(item => {
+        if (i != item.product_id) {
+            i = item.product_id
+            payload.push(item)
+        }
+    })
     try {
         data.code = 0
-        data.msg = "添加成功"
-        data.param = SELECT
+        data.msg = "请求成功"
+        data.param = payload
     } catch (error) {
         data.code = 400
         data.param = []
