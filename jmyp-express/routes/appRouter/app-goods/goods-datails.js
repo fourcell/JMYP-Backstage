@@ -5,7 +5,7 @@ const mysql = require('../../../api/mysql/index');
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-    res.append('Access-Control-Allow-Origin', '*');
+  res.append('Access-Control-Allow-Origin', '*');
     const id = req.query.id   //接受post参数
 
     const data = {}   //返回的data数据
@@ -17,7 +17,7 @@ router.get('/', async function (req, res, next) {
     let stock_num = 0 //商品的所有库存
 
     let select = await mysql(`SELECT * FROM product,sku_product,color,size WHERE product.product_id = ${id} AND sku_product.product_id = ${id} AND
-    sku_product.sku_id = color.color_id AND sku_product.sku_id = size.size_id `)
+    sku_product.color_id = color.color_id AND sku_product.sku_id = size.size_id `)
 
     select.map(item => {
         stock_num += item.stock
