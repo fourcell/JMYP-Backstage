@@ -15,6 +15,9 @@ var loginRouter = require('./routes/backstageRouter/backstage-login');
 /******************************************************平台端商城接口****************************************************************************/
 let selectType = require('./routes/backstageRouter/goods/select-type')
 let goodsAdd = require('./routes/backstageRouter/goods/goods-add')
+let goodsList = require('./routes/backstageRouter/goods/goods-list')
+let goodsDelete = require('./routes/backstageRouter/goods/goods-delete')
+let orderSelect = require('./routes/backstageRouter/order/order-select')
 
 /******************************************************app商城接口****************************************************************************/
 let appRegsRouter = require('./routes/appRouter/app-login/login-reg')
@@ -73,6 +76,9 @@ app.use('/liulaobanzhuanshuSearch',liulaobanzhuanshuSearch)
 
 app.use('/selectType',selectType)
 app.use('/goodsAdd',goodsAdd)
+app.use('/goodsList',goodsList)
+app.use('/goodsDelete',goodsDelete)
+app.use('/orderSelect',orderSelect)
 
 
 
