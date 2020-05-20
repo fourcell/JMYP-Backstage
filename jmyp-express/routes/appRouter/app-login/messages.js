@@ -6,7 +6,7 @@ const { randomNumber, generateSHA1SignatureByHex } = require('../../../api/const
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-    res.append('Access-Control-Allow-Origin', '*');
+    // res.append('Access-Control-Allow-Origin', '*');
     //6位随机验证码
     // const Nonce = randomNumber()
 

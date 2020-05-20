@@ -5,7 +5,7 @@ const mysql = require('../../../api/mysql/index');
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-    res.append('Access-Control-Allow-Origin', '*');
+    // res.append('Access-Control-Allow-Origin', '*');
     const user_id = req.query.userId   //接受post参数
 
     const data = {}   //返回的data数据

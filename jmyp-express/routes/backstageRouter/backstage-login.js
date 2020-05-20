@@ -7,7 +7,7 @@ const user = require('../../api/router/user')
 
 /* GET home page. */
 router.post('/', async function (req, res, next) {
-  res.append('Access-Control-Allow-Origin', '*');
+  // res.append('Access-Control-Allow-Origin', '*');
   const body = req.body   //接受post参数
   console.log(body)
 
